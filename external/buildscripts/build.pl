@@ -173,14 +173,14 @@ if ($buildDeps ne "" && not $forceDefaultBuildDeps)
 }
 else
 {
-	$externalBuildDeps = "$monoroot/../../mono-build-deps/build";
+	$externalBuildDeps = "$monoroot/mono-build-deps/build";
 }
 
 # Only clean up the path if the directory exists, if it doesn't exist,
 # abs_path ends up returning an empty string
 $externalBuildDeps = abs_path($externalBuildDeps) if (-d $externalBuildDeps);
 
-my $extraBuildTools = "$monoroot/../../mono-build-tools-extra/build";
+my $extraBuildTools = "$monoroot/mono-build-tools-extra/build";
 
 my $existingExternalMonoRoot = "$externalBuildDeps/MonoBleedingEdge";
 my $existingExternalMono = "";
